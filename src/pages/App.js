@@ -1,11 +1,10 @@
 import React from "react";
-import TestButton from "../components/TestButton";
+import ProductCard from "../components/ProductCard";
 
 const App = () => {
   return (
     <div className="p-10">
-      <h1>Home Page</h1>
-      <TestButton></TestButton>
+      <ProductCard></ProductCard>
     </div>
   );
 };
