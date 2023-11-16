@@ -4,10 +4,10 @@ import model2 from "../assets/model2.jpg";
 function CategoryCard() {
   const card = [1, 2, 3];
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-4/5 m-auto gap-x-5 gap-y-5 ">
       {card.map(() => (
-        <div className="bg-red-500  flex  w-4/5 m-auto ">
-          <div className=" w-96 h-72 relative mt-8 mb-8 group border border-gray-500">
+        <div className="flex justify-center">
+          <div className=" w-[25rem] h-72 flex  relative  group border border-gray-500">
             <img
               className=" w-full h-full object-cover object-left"
               src={model2}
@@ -25,7 +25,7 @@ function CategoryCard() {
               <hr className=" h-1 bg-black group-hover:bg-white transition ease-in-out delay-100 group-hover:-translate-px-5 group-hover:scale-110 duration-1000"></hr>
             </div>
           </div>
-        </div>
+          </div>
       ))}
     </div>
   );
