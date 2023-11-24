@@ -1,11 +1,12 @@
 import React from "react";
-import TestButton from "../components/TestButton";
+// import ProductCard from "../components/ProductCard";
+// import Test from "../components/Test";
+import Card from "../components/Card";
 
 const App = () => {
   return (
-    <div className="p-10">
-      <h1>Home Page</h1>
-      <TestButton></TestButton>
+    <div>
+      <Card />
     </div>
   );
 };
