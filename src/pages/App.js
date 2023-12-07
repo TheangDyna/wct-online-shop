@@ -1,7 +1,9 @@
 import React from "react";
-import TestButton from "../components/TestButton";
 import CategoryCard from "../components/CategoryCard";
 import Navbar from "../components/Navbar";
+// import ProductCard from "../components/ProductCard";
+// import Test from "../components/Test";
+import Card from "../components/Card";
 
 const App = () => {
   const products = [
@@ -27,7 +29,6 @@ const App = () => {
   return (
     <div className="">
       <h1>Home Page</h1>
-      <TestButton></TestButton>
       <Navbar></Navbar>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-4/5 m-auto gap-x-5 gap-y-5 ">
         {products.map((items, index) => (
@@ -38,6 +39,7 @@ const App = () => {
           />
         ))}
       </div>
+      <Card />
     </div>
   );
 };
