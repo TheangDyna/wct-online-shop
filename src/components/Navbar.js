@@ -5,7 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <div className="w-full fixed bg-white  z-40">
+    <div className="w-full bg-white  z-40">
       <div className="navbar  w-11/12 m-auto ">
         <div className="navbar-start ">
           <div className="dropdown">
