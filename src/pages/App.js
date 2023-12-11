@@ -1,14 +1,13 @@
 import React from "react";
-// import ProductCard from "../components/ProductCard";
-// import Test from "../components/Test";
 import Card from "../components/Card";
+import Main from "../components/quick card/Main";
 
 const App = () => {
   return (
     <div>
-      <Card />
+      {/* <Card /> */}
+      <Main />
     </div>
   );
 };
-
 export default App;
