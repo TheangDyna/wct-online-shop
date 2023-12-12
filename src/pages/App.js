@@ -3,6 +3,7 @@ import TestButton from "../components/TestButton";
 import CategoryCard from "../components/CategoryCard";
 import Navbar from "../components/Navbar";
 import BodySlide from "../components/BodySlide";
+import ViewCart from "../components/ViewCart";
 
 const App = () => {
   const products = [
@@ -40,6 +41,7 @@ const App = () => {
           />
         ))}
       </div>
+      <ViewCart/>
     </div>
   );
 };
