@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 // import Test from "../components/Test";
 import Card from "../components/Card";
 import Main from "../components/quick card/Main";
+import BodySlide from "../components/BodySlide";
+import ViewCart from "../components/ViewCart";
 
 const App = () => {
   const products = [
@@ -30,7 +32,10 @@ const App = () => {
   return (
     <div className="">
       <h1>Home Page</h1>
+      {/* <h1>Home Page</h1>
+      <TestButton></TestButton> */}
       <Navbar></Navbar>
+      <BodySlide/>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-4/5 m-auto gap-x-5 gap-y-5 ">
         {products.map((items, index) => (
           <CategoryCard
@@ -43,6 +48,7 @@ const App = () => {
       <Card />
     
       <Main />
+      <ViewCart/>
     </div>
   );
 };

@@ -7,3 +7,9 @@
 .menu li > details > summary:active {
     background-color: rgba(0, 0, 255, 0);
 }
+
+.input-primary:focus, 
+.input-primary:focus-within {
+    outline-color: rgba(128, 128, 128, 0.608);
+    border: none;
+}

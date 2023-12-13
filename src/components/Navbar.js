@@ -5,7 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <div>
+    <div className="w-full bg-white  z-40">
       <div className="navbar  w-11/12 m-auto ">
         <div className="navbar-start ">
           <div className="dropdown">
@@ -64,14 +64,15 @@ function Navbar() {
             Online Shop
           </a>
         </div>
-        <div className="navbar-center hidden lg:flex ">
-          <ul className=" menu menu-horizontal px-1 text-xs font-semibold  ">
+        <div className="navbar-center hidden lg:flex">
+          <ul className=" menu menu-horizontal px-1 text-xs font-semibold items-center  ">
             <li tabIndex={0}>
-              <details >
-                <summary className=" hover:bg-white hover:bg-opacity-0 hover:text-blue-700">
+           
+              <details>
+                <summary className=" hover:bg-slate-50 hover:bg-opacity-0 hover:text-blue-700">
                   Home
                 </summary>
-                <ul className="p-2 z-10 text-xs ">
+                <ul className="z-50 text-xs ">
                   <li>
                     <a>HomePage1</a>
                   </li>
@@ -83,8 +84,9 @@ function Navbar() {
                   </li>
                 </ul>
               </details>
+              
             </li>
-            <li >
+            <li>
               <a className="hover:bg-red-300 hover:bg-opacity-0 hover:text-blue-700 ">
                 Shop
               </a>
