@@ -1,6 +1,7 @@
 import React from "react";
 import CategoryCard from "../components/CategoryCard";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 // import ProductCard from "../components/ProductCard";
 // import Test from "../components/Test";
 import Card from "../components/Card";
@@ -43,6 +44,7 @@ const App = () => {
       <Card />
     
       <Main />
+      <Footer></Footer>
     </div>
   );
 };
