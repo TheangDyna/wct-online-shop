@@ -15,7 +15,7 @@ export default function Card() {
 
               <div className="absolute group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <button className="rounded-full bg-white my-4 px-4 py-2 inline-block  ">
-                  See Mo
+                  See More
                 </button>
               </div>
             </div>

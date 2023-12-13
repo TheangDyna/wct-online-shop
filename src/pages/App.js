@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 // import ProductCard from "../components/ProductCard";
 // import Test from "../components/Test";
 import Card from "../components/Card";
+import Main from "../components/quick card/Main";
 
 const App = () => {
   const products = [
@@ -40,8 +41,9 @@ const App = () => {
         ))}
       </div>
       <Card />
+    
+      <Main />
     </div>
   );
 };
-
 export default App;
