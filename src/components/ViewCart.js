@@ -43,9 +43,9 @@ function ViewCart() {
             <tr>
               <td></td>
               <td  className="row-span-2  flex justify-end p-8"><InputCoupon/></td>
-              <td><ButtonCoupon/></td>
+              <td><ButtonCoupon chidren={"APPLY COUPON"} /></td>
               <td></td>
-              <td className="row-span-2"><ButtonCoupon/></td>
+              <td className="row-span-2"><ButtonCoupon chidren={"UPDATE CART"} /></td>
             </tr>
           </tbody>
         </table>

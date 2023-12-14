@@ -4,6 +4,7 @@ import CategoryCard from "../components/CategoryCard";
 import Navbar from "../components/Navbar";
 import BodySlide from "../components/BodySlide";
 import ViewCart from "../components/ViewCart";
+import CartTotal from "../components/CartTotal";
 
 const App = () => {
   const products = [
@@ -42,6 +43,7 @@ const App = () => {
         ))}
       </div>
       <ViewCart/>
+      <CartTotal/>
     </div>
   );
 };
