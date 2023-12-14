@@ -6,28 +6,28 @@ function CartTotal() {
     <div className='w-96 m-auto '>
       <div className=' border border-gray-300 p-10'>
             <h1 className='font-bold'>CART TOTALS</h1>
-            <div className='flex gap-3 mt-5'>
-                <p> Subtotal: </p>
+            <div className='flex gap-3 mt-5 text-base'>
+                <p className='font-medium'> Subtotal: </p>
                 <span>
                     $79.65
                 </span>
             </div>
             <hr className='mt-3'/>
             <div className='py-3 w-full flex gap-5'>
-                <div className=' w-1/5 h-60'>
+                <div className=' w-1/5 h-60 font-medium'>
                     <p> Shipping: </p>
                 </div>
                 <div className=' w-4/5'>
-                    <p>There are no shipping methods available.
+                    <p className='text-sm text-gray-500'>There are no shipping methods available.
                          Please double check your address, or
                           contact us if you need any help. 
                     </p>
-                    <p className='font-medium mt-3'>
+                    <p className='font-medium text-gray-500 text-sm mt-3'>
                         CALCULATE SHIPPING
                     </p>
                     <div className=" relative  h-10 border border-gray-300  mt-2 rounded-md">
                         <div className=" absolute h-full w-11/12 left-0 flex items-center">
-                            <select id="currency" name="currency" class="h-full z-10 w-full rounded-md border border-gray-600 bg-transparent py-0 pl-2 pr-7 text-gray-900 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                            <select id="currency" name="currency" class="h-full z-10 w-full rounded-md border border-gray-400 bg-transparent py-0 pl-2 pr-7 text-gray-900 sm:text-sm">
                                 <option>Select a country</option>
                                 <option>USA</option>
                                 <option>EUR</option>
@@ -46,8 +46,8 @@ function CartTotal() {
                 </div>
             </div>
             <hr className='mt-3'></hr>
-            <div className='flex gap-10 font-semibold mt-5'>
-                <p> Total: </p>
+            <div className='flex gap-10 mt-5 text-base'>
+                <p className='font-semibold '> Total: </p>
                     <span>
                         $79.65
                     </span>
