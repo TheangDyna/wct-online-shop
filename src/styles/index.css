@@ -2,14 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.menu li > *:not(ul):not(.menu-title):not(details):active,
-.menu li > *:not(ul):not(.menu-title):not(details).active,
-.menu li > details > summary:active {
-    background-color: rgba(0, 0, 255, 0);
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.menu li > *:not(ul):not(.menu-title):not(details):active {
+  background-color: inherit;
+  color: inherit;
 }
 
-.input-primary:focus, 
+.menu li > *:not(ul):not(.menu-title):not(details):focus {
+  background-color: inherit;
+}
+
+.input-primary:focus,
 .input-primary:focus-within {
-    outline-color: rgba(128, 128, 128, 0.608);
-    border: none;
+  outline-color: rgba(128, 128, 128, 0.608);
+  border: none;
 }

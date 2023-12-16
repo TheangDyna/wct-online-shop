@@ -1,14 +1,13 @@
-import React from 'react'
+import React from "react";
 
-function ButtonCoupon() {
+function ButtonCoupon({ chidren }) {
   return (
     <div>
-        <button 
-            className="btn btn-primary rounded-full w-36 text-xs font-medium hover:text-white bg-slate-300 outline-none border-none text-gray-800">
-            APPLY COUNPON
-        </button>
+      <button className="btn btn-primary w-36 rounded-full border-none bg-slate-300 text-xs font-medium text-gray-800 outline-none hover:text-white">
+        {chidren}
+      </button>
     </div>
-  )
+  );
 }
 
-export default ButtonCoupon
+export default ButtonCoupon;

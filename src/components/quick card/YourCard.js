@@ -2,9 +2,9 @@ import React from "react";
 
 export default function YourCard() {
   return (
-    <div className="flex  mb-4">
+    <div className="mb-4  flex">
       <div className="my-4 text-2xl font-bold">YourCard</div>
-      <div className="grow max-w-xs "></div>
+      <div className="max-w-xs grow "></div>
 
       <div className="m-4 ">
         <svg
@@ -13,7 +13,7 @@ export default function YourCard() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-5 h-5 "
+          className="h-5 w-5 "
         >
           <path
             strokeLinecap="round"

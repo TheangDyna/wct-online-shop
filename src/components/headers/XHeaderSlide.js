@@ -1,0 +1,100 @@
+import React, { useEffect, useState } from "react";
+import { ChevronLeftIcon } from "../icons/ChevronLeftIcon";
+import { ChevronRightIcon } from "../icons/ChevronRightIcon";
+
+const slides = [
+  {
+    cover:
+      "https://preview.colorlib.com/theme/cozastore/images/slide-01.jpg.webp",
+    title: "title 01",
+  },
+  {
+    cover:
+      "https://preview.colorlib.com/theme/cozastore/images/slide-02.jpg.webp",
+    title: "title 02",
+  },
+  {
+    cover:
+      "https://preview.colorlib.com/theme/cozastore/images/slide-03.jpg.webp",
+    title: "title 03",
+  },
+];
+
+const XHeaderSlide = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [intervalId, setIntervalId] = useState(null);
+
+  const nextSlide = () => {
+    clearInterval(intervalId);
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    clearInterval(intervalId);
+    setCurrentSlide(
+      (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
+    );
+  };
+
+  useEffect(() => {
+    const newIntervalId = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    }, 5000);
+
+    setIntervalId(newIntervalId);
+
+    return () => clearInterval(newIntervalId);
+  }, [currentSlide]);
+
+  return (
+    <section className="w-full h-screen bg-white carousel">
+      {slides.map((item, index) => {
+        return (
+          <div
+            key={index}
+            className={`carousel-item h-full w-full animate-opacity ${
+              index === currentSlide ? "absolute" : "hidden"
+            }`}
+          >
+            <img
+              alt=""
+              src={item.cover}
+              className="object-cover w-full h-full"
+            />
+
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <button className="btn btn-circle btn-ghost" onClick={prevSlide}>
+                <ChevronLeftIcon className="w-6 h-6" />
+              </button>
+              <button className="btn btn-circle btn-ghost" onClick={nextSlide}>
+                <ChevronRightIcon className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+        );
+      })}
+      {slides.map((item, index) => {
+        return (
+          <div
+            key={index}
+            className={`mx-auto h-min text-black transform -translate-y-1/2 top-1/2 min-w-[1200px] ${
+              index === currentSlide ? "relative" : "hidden"
+            }`}
+          >
+            <div>
+              <p className="text-3xl w-max animate-moveRight">{item.title}</p>
+              <div className="h-5" />
+              <h1 className="text-6xl text-black w-max animate-moveLeft">
+                NEW SEASON
+              </h1>
+              <div className="h-10" />
+              <button className="rounded-full btn w-max">SHOP NOW</button>
+            </div>
+          </div>
+        );
+      })}
+    </section>
+  );
+};
+
+export default XHeaderSlide;

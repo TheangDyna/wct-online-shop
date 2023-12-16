@@ -1,29 +1,34 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
-  theme: {
-    screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "976px",
-      xl: "1440px",
-    },
-    spacing: {
-      1: "8px",
-      2: "12px",
-      3: "16px",
-      4: "24px",
-      5: "32px",
-      6: "48px",
-    },
-    extend: {
-      colors: {
-        anes: "#ed15db",
-      },
-    },
-  },
   plugins: [require("daisyui")],
   daisyui: {
     themes: false,
+  },
+  theme: {
+    fontFamily: {
+      sans: ['"Poppins"', "sans-serif"],
+    },
+    extend: {
+      keyframes: {
+        moveRight: {
+          "0%": { transform: "translateX(-100px)", opacity: "0%" },
+          "100%": { transform: "translateX(0)", opacity: "100%" },
+        },
+        moveLeft: {
+          "0%": { transform: "translateX(100px)", opacity: "0%" },
+          "100%": { transform: "translateX(0)", opacity: "100%" },
+        },
+        opacity: {
+          "0%": { opacity: "0%" },
+          "100%": { opacity: "100%" },
+        },
+      },
+      animation: {
+        moveRight: "moveRight 1s ease-in-out",
+        moveLeft: "moveLeft 1s ease-in-out",
+        opacity: "opacity 1s ease-in-out",
+      },
+    },
   },
 };
