@@ -2,16 +2,18 @@ import React from "react";
 
 const XCategoryCard = ({ cover, title, description }) => {
   return (
-    <div className="flex justify-center">
-      <div className="relative flex border group h-[280px] min-w-[300px] max-w-[450px]">
-        <img
-          className="object-cover object-right w-full h-full "
-          src={cover}
-          alt={title}
-        />
-        <div className="absolute top-0 w-full h-full transition duration-300 opacity-75 group-hover:bg-blue-600" />
+    <div className="w-full">
+      <div className="relative w-full border group">
+        <div className="relative pb-[66.66%]">
+          <img
+            className="absolute object-cover object-right w-full h-full "
+            src={cover}
+            alt={title}
+          />
+        </div>
+        <div className="absolute top-0 w-full h-full transition duration-300 opacity-90 group-hover:bg-[#717fe0]" />
 
-        <div className="absolute w-full h-full p-10 group-hover:text-white">
+        <div className="absolute top-0 w-full h-full p-10 group-hover:text-white">
           <h1 className="text-2xl font-bold">{title}</h1>
           <p className="text-gray-500 group-hover:text-white">{description}</p>
         </div>

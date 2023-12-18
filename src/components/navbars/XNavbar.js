@@ -1,27 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { MagnifyingGlassIcon } from "../icons/MagnifyingGlassIcon";
 import { ShoppingCartIcon } from "../icons/ShoppingCartIcon";
-import { HeartIcon } from "../icons/HeartIcon";
 import { Link } from "react-router-dom";
-
-const navigations = [
-  {
-    title: "Home",
-    path: "/",
-  },
-  {
-    title: "shop",
-    path: "/shop",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Contact ",
-    path: "/contact",
-  },
-];
+import { navigations } from "../../constants/navigation";
+import { HeartOutlineIcon } from "../icons/HeartOutlineIcon";
 
 const XNavbar = ({ isHomepage }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +23,7 @@ const XNavbar = ({ isHomepage }) => {
 
   return (
     <nav
-      className={`fixed top-0 z-10 flex w-full items-center duration-500 px-4 ${
+      className={`fixed top-0 z-20 flex w-full items-center duration-500 px-4 ${
         isHomepage
           ? isScrolled
             ? "h-[70px] bg-white shadow-sm"
@@ -49,7 +31,7 @@ const XNavbar = ({ isHomepage }) => {
           : "h-[70px] bg-white shadow-sm sticky"
       }`}
     >
-      <div className="navbar mx-auto max-w-[1200px]">
+      <div className="navbar mx-auto max-w-[1380px]">
         <div className="flex flex-1">
           <Link to="/" className="text-2xl">
             <span className="font-bold">Online</span> Shop
@@ -72,16 +54,16 @@ const XNavbar = ({ isHomepage }) => {
         <button className="btn btn-circle btn-ghost">
           <MagnifyingGlassIcon className="w-6 h-6" />
         </button>
-        <button className="btn btn-circle btn-ghost">
+        <label className="btn btn-circle btn-ghost" htmlFor="my-drawer">
           <div className="indicator ">
-            <span className="badge indicator-item badge-secondary">9</span>
+            <span className="px-1 badge indicator-item badge-secondary">9</span>
             <ShoppingCartIcon className="w-6 h-6" />
           </div>
-        </button>
+        </label>
         <button className="btn btn-circle btn-ghost">
           <div className="indicator ">
-            <span className="badge indicator-item badge-secondary">9</span>
-            <HeartIcon className="w-6 h-6" />
+            <span className="px-1 badge indicator-item badge-secondary">9</span>
+            <HeartOutlineIcon className="w-6 h-6" />
           </div>
         </button>
       </div>

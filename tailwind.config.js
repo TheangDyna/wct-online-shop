@@ -10,6 +10,9 @@ module.exports = {
       sans: ['"Poppins"', "sans-serif"],
     },
     extend: {
+      spacing: {
+        "2/3": "6.666667%",
+      },
       keyframes: {
         moveRight: {
           "0%": { transform: "translateX(-100px)", opacity: "0%" },

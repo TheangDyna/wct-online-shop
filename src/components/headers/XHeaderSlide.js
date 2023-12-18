@@ -47,12 +47,12 @@ const XHeaderSlide = () => {
   }, [currentSlide]);
 
   return (
-    <section className="w-full h-screen bg-white carousel">
+    <section className="w-full h-screen bg-gray-200 carousel">
       {slides.map((item, index) => {
         return (
           <div
             key={index}
-            className={`carousel-item h-full w-full animate-opacity ${
+            className={`carousel-item h-screen w-full animate-opacity ${
               index === currentSlide ? "absolute" : "hidden"
             }`}
           >
@@ -62,7 +62,7 @@ const XHeaderSlide = () => {
               className="object-cover w-full h-full"
             />
 
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <div className="absolute z-10 flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <button className="btn btn-circle btn-ghost" onClick={prevSlide}>
                 <ChevronLeftIcon className="w-6 h-6" />
               </button>
@@ -77,7 +77,7 @@ const XHeaderSlide = () => {
         return (
           <div
             key={index}
-            className={`mx-auto h-min text-black transform -translate-y-1/2 top-1/2 min-w-[1200px] ${
+            className={`mx-auto h-min text-black transform -translate-y-1/2 top-1/2 min-w-[1380px] px-4 ${
               index === currentSlide ? "relative" : "hidden"
             }`}
           >

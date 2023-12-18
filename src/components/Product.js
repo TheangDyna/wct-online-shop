@@ -1,5 +1,5 @@
 import React from "react";
-import { RxCross2 } from "react-icons/rx";
+// import { RxCross2 } from "react-icons/rx";
 
 function Product() {
   return (
@@ -14,7 +14,7 @@ function Product() {
           {/* <div className='flex items-center justify-center w-full h-full text-2xl text-white '> <RxCross2 /></div> */}
         </div>
         <div className="absolute items-center invisible text-2xl text-white -translate-x-3 -translate-y-2 group left-1/2 top-1/2 group-hover:visible ">
-          <RxCross2 />
+          {/* <RxCross2 /> */}
         </div>
       </div>
     </div>
