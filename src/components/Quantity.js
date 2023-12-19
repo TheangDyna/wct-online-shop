@@ -7,7 +7,7 @@ function Quantity() {
   const [amount,setamount] = useState(0);
   return (
     <div>
-      <div className="join join-vertical lg:join-horizontal">
+      <div className="join w-full ">
         <button 
           onClick={() => setamount((value) => value-1) }
           disabled={amount <= 0}
