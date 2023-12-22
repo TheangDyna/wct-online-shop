@@ -61,7 +61,7 @@ function Navbar() {
             </ul>
           </div>
           <a className="btn btn-ghost md:text-md text-xs hover:bg-white hover:bg-opacity-0">
-            Online Shop
+            <h3><strong> COZA </strong> STORE</h3>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex ">
@@ -112,7 +112,7 @@ function Navbar() {
           </ul>
         </div>
         <div className="navbar-end gap-4 sm:gap-6 md:gap-8">
-          <div className="mr-5">
+          <div className="">
             <IoSearchSharp className="hover:text-blue-700" />
           </div>
           <div className="indicator ">

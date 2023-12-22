@@ -1,10 +1,10 @@
 import React from "react";
 import CategoryCard from "../components/CategoryCard";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 // import ProductCard from "../components/ProductCard";
 // import Test from "../components/Test";
 import Card from "../components/Card";
+import About from "../components/About";
 
 const App = () => {
   const products = [
@@ -29,9 +29,9 @@ const App = () => {
   ];
   return (
     <div className="">
-      <h1>Home Page</h1>
-      <Navbar></Navbar>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-4/5 m-auto gap-x-5 gap-y-5 ">
+      {/* <h1>Home Page</h1> */}
+      {/* <Navbar></Navbar> */}
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-4/5 m-auto gap-x-5 gap-y-5 ">
         {products.map((items, index) => (
           <CategoryCard
             title={items.title}
@@ -39,9 +39,9 @@ const App = () => {
             cover={items.cover}
           />
         ))}
-      </div>
-      <Card />
-      <Footer></Footer>
+      </div> */}
+
+      <About />
     </div>
   );
 };

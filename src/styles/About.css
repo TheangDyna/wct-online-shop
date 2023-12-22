@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-image: url();
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+  }
+  .hero { 
+    color: white;
+    text-align: center;
+    padding: 70px 0 70px 0;
+    background-color: grey;
+    background-image: url("https://iv1.lisimg.com/image/18492846/740full-jordan-mcewen.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+  .hero img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .nav {
+    color: black;
+    display: flex;
+    background-color: white;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  .nav ul li {
+    text-decoration: none;
+    text-align: start;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0 20px 0 20px;
+    overflow: hidden;
+    float: left;
+  }
+  .nav li a {
+    text-decoration: none;
+    padding: 14px 16px;
+  }
+  .nav li a:hover:not(.active) {
+    color: rgb(21, 21, 20);
+    background-color: #ce9090;
+    border-radius: 5px;
+  }
+  .nav li.active {
+    color: rgb(7, 7, 11);
+  }
+  /* .navbar {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2hvcHBpbmclMjBnaXJsfGVufDB8fDB8fHww);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: auto;
+      padding: 350px;
+      height: 300px;
+      
+  } */
+
+
+  
