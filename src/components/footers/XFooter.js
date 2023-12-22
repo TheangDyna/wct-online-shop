@@ -2,7 +2,7 @@ import React from "react";
 
 const XFooter = () => {
   return (
-    <footer className="bg-[#222222] pt-[75px] pb-[75px] text-gray-400 text-sm px-4">
+    <footer className="bg-[#222222] pt-[75px] pb-[75px] text-gray-400 text-sm px-6">
       <div className="max-w-[1380px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="leading-8">
           <p className="mb-5 text-base font-bold text-white">CATEGORIES </p>

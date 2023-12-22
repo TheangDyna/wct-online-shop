@@ -14,7 +14,7 @@ const XProductCard = ({ title, price, cover }) => {
         </div>
 
         <div className="absolute right-0 duration-300 transform -translate-x-1/2 -translate-y-1/2 left-1/2 -bottom-20 group-hover:bottom-5">
-          <button className="h-10 px-8 font-normal bg-white border-none rounded-full btn btn-sm">
+          <button className="h-10 px-8 font-normal bg-white border-none rounded-full w-max btn btn-sm hover:bg-[#222] hover:text-white">
             Quick View
           </button>
         </div>

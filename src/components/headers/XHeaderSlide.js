@@ -77,7 +77,7 @@ const XHeaderSlide = () => {
         return (
           <div
             key={index}
-            className={`mx-auto h-min text-black transform -translate-y-1/2 top-1/2 min-w-[1380px] px-4 ${
+            className={`mx-auto h-min text-black transform -translate-y-1/2 top-1/2 min-w-[1380px] px-6 ${
               index === currentSlide ? "relative" : "hidden"
             }`}
           >
@@ -88,7 +88,9 @@ const XHeaderSlide = () => {
                 NEW SEASON
               </h1>
               <div className="h-10" />
-              <button className="rounded-full btn w-max">SHOP NOW</button>
+              <button className="px-12 rounded-full bg-[#717fe0] hover:bg-[#222] border-none text-white btn">
+                SHOP NOW
+              </button>
             </div>
           </div>
         );
