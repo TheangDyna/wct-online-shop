@@ -1,4 +1,4 @@
-export function XMarkIcon(props) {
+export function MinusIcon(props) {
   return (
     <svg
       fill="none"
@@ -9,11 +9,7 @@ export function XMarkIcon(props) {
       aria-hidden="true"
       {...props}
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M6 18 18 6M6 6l12 12"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
     </svg>
   );
 }

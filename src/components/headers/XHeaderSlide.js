@@ -24,12 +24,12 @@ const XHeaderSlide = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
 
-  const nextSlide = () => {
+  const handleNext = () => {
     clearInterval(intervalId);
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
-  const prevSlide = () => {
+  const handlePrev = () => {
     clearInterval(intervalId);
     setCurrentSlide(
       (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
@@ -63,10 +63,10 @@ const XHeaderSlide = () => {
             />
 
             <div className="absolute z-10 flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <button className="btn btn-circle btn-ghost" onClick={prevSlide}>
+              <button className="btn btn-circle btn-ghost" onClick={handlePrev}>
                 <ChevronLeftIcon className="w-6 h-6" />
               </button>
-              <button className="btn btn-circle btn-ghost" onClick={nextSlide}>
+              <button className="btn btn-circle btn-ghost" onClick={handleNext}>
                 <ChevronRightIcon className="w-6 h-6" />
               </button>
             </div>

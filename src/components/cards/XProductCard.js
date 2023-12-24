@@ -1,5 +1,6 @@
 import React from "react";
 import { HeartOutlineIcon } from "../icons/HeartOutlineIcon";
+import XQuickViewModal from "../modals/XQuickViewModal";
 
 const XProductCard = ({ title, price, cover }) => {
   return (
@@ -13,8 +14,11 @@ const XProductCard = ({ title, price, cover }) => {
           />
         </div>
 
-        <div className="absolute right-0 duration-300 transform -translate-x-1/2 -translate-y-1/2 left-1/2 -bottom-20 group-hover:bottom-5">
-          <button className="h-10 px-8 font-normal bg-white border-none rounded-full w-max btn btn-sm hover:bg-[#222] hover:text-white">
+        <div className="absolute flex justify-center w-full duration-300 -bottom-20 group-hover:bottom-5">
+          <button
+            className="h-10 px-8 font-normal bg-white border-none rounded-full w-max btn btn-sm hover:bg-[#222] hover:text-white"
+            onClick={() => document.getElementById("my_modal").showModal()}
+          >
             Quick View
           </button>
         </div>
@@ -28,6 +32,7 @@ const XProductCard = ({ title, price, cover }) => {
           <HeartOutlineIcon className="w-5 h-5 text-gray-500" />
         </button>
       </div>
+      <XQuickViewModal id="my_modal" />
     </div>
   );
 };

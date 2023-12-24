@@ -46,7 +46,7 @@ function ViewCart() {
             {/* row 2 */}
             <tr>
               <td></td>
-              <td className="flex justify-end row-span-2 p-8">
+              {/* <td className="flex justify-end row-span-2 p-8">
                 <InputCoupon />
               </td>
               <td>
@@ -55,6 +55,16 @@ function ViewCart() {
               <td></td>
               <td className="row-span-2">
                 <ButtonCoupon>APPLY COUNPON</ButtonCoupon>
+              </td> */}
+              <td className="flex justify-end row-span-2 p-8">
+                <InputCoupon />
+              </td>
+              <td>
+                <ButtonCoupon chidren={"APPLY COUPON"} />
+              </td>
+              <td></td>
+              <td className="row-span-2">
+                <ButtonCoupon chidren={"UPDATE CART"} />
               </td>
             </tr>
           </tbody>

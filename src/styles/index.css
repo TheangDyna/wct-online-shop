@@ -13,8 +13,7 @@
   background-color: inherit;
 }
 
-.input-primary:focus,
-.input-primary:focus-within {
-  outline-color: rgba(128, 128, 128, 0.608);
-  border: none;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
 }
