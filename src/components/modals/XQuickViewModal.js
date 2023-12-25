@@ -1,7 +1,7 @@
 import React from "react";
 import { XMarkIcon } from "../icons/XMarkIcon";
-import XCheckOutCatalog from "../catalog/XCheckOutCatalog";
 import XViewProductsCatalog from "../catalog/XViewProductsCatalog";
+import AddToCartCatalog from "../catalog/XAddToCartCatalog";
 
 const XQuickViewModal = ({ id }) => {
   const images = [
@@ -23,7 +23,7 @@ const XQuickViewModal = ({ id }) => {
             <XViewProductsCatalog images={images} />
           </div>
           <div className="order-1 md:order-2">
-            <XCheckOutCatalog />
+            <AddToCartCatalog />
           </div>
         </div>
       </div>

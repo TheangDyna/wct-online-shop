@@ -12,7 +12,7 @@ function CartTotal() {
         </div>
         <hr className="mt-3" />
         <div className="flex w-full gap-5 py-3">
-          <div className="w-1/5 font-medium  h-60">
+          <div className="w-1/5 font-medium h-60">
             <p> Shipping: </p>
           </div>
           <div className="w-4/5 ">
@@ -57,7 +57,7 @@ function CartTotal() {
         </div>
         <hr className="mt-3"></hr>
         <div className="flex gap-10 mt-5 text-base">
-          <p className="font-semibold "> Total: </p>
+          <p className="font-bold "> Total: </p>
           <span>$79.65</span>
         </div>
         <div className="flex justify-center mt-6">

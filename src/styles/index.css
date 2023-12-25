@@ -4,15 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-.menu li > *:not(ul):not(.menu-title):not(details):active {
-  background-color: inherit;
-  color: inherit;
-}
-
-.menu li > *:not(ul):not(.menu-title):not(details):focus {
-  background-color: inherit;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   display: none;

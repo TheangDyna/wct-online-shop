@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MinusIcon } from "../icons/MinusIcon";
 import { PlusIcon } from "../icons/PlusIcon";
 
 const XQuantityButton = () => {
   const [amount, setAmount] = useState(0);
+
+  useEffect(() => {
+    return () => {
+      setAmount(0);
+    };
+  }, []);
+
   return (
     <div className="rounded-sm join">
       <button

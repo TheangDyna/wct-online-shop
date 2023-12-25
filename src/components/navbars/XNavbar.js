@@ -4,6 +4,7 @@ import { ShoppingCartIcon } from "../icons/ShoppingCartIcon";
 import { Link } from "react-router-dom";
 import { navigations } from "../../constants/navigation";
 import { HeartOutlineIcon } from "../icons/HeartOutlineIcon";
+import XNavLink from "../link/XNavLink";
 
 const XNavbar = ({ isHomepage }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,9 @@ const XNavbar = ({ isHomepage }) => {
           ? isScrolled
             ? "h-[70px] bg-white shadow-sm"
             : "h-[84px] bg-transparent"
-          : "h-[70px] bg-white shadow-sm sticky"
+          : isScrolled
+          ? "h-[70px] bg-white shadow-sm sticky"
+          : "h-[84px] bg-white shadow-sm sticky"
       }`}
     >
       <div className="navbar mx-auto max-w-[1380px]">
@@ -37,13 +40,11 @@ const XNavbar = ({ isHomepage }) => {
             <span className="font-bold">Online</span> Shop
           </Link>
           <div className="hidden ml-10 lg:flex">
-            <ul className="items-center menu menu-horizontal">
+            <ul className="flex">
               {navigations.map((item, index) => {
                 return (
                   <li key={index}>
-                    <Link to={item.path} className="focus:bg-inherit">
-                      {item.title}
-                    </Link>
+                    <XNavLink path={item.path}>{item.title}</XNavLink>
                   </li>
                 );
               })}

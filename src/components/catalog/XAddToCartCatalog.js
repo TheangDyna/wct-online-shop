@@ -5,7 +5,7 @@ import { FacebookIcon } from "../icons/FacebookIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { InstagramIcon } from "../icons/InstagramIcon";
 
-const XCheckOutCatalog = () => {
+const AddToCartCatalog = () => {
   return (
     <div className="flex flex-col w-full gap-y-5">
       <h1 className="text-2xl font-normal text-gray-700 ">
@@ -63,4 +63,4 @@ const XCheckOutCatalog = () => {
   );
 };
 
-export default XCheckOutCatalog;
+export default AddToCartCatalog;

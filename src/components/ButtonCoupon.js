@@ -9,7 +9,7 @@ import React from "react";
 function ButtonCoupon({ chidren }) {
   return (
     <div>
-      <button className="text-sm font-semibold text-gray-800 border-none rounded-full outline-none btn-sm lg:btn-md btn-primary hover:text-white bg-slate-300">
+      <button className="text-sm font-bold text-gray-800 border-none rounded-full outline-none btn-sm lg:btn-md btn-primary hover:text-white bg-slate-300">
         {chidren}
       </button>
     </div>

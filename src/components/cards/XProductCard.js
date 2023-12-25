@@ -1,8 +1,9 @@
 import React from "react";
 import { HeartOutlineIcon } from "../icons/HeartOutlineIcon";
 import XQuickViewModal from "../modals/XQuickViewModal";
+import { Link } from "react-router-dom";
 
-const XProductCard = ({ title, price, cover }) => {
+const XProductCard = ({ title, price, cover, id }) => {
   return (
     <div className="w-full">
       <div className="relative w-full overflow-hidden group">
@@ -25,7 +26,12 @@ const XProductCard = ({ title, price, cover }) => {
       </div>
       <div className="flex items-start pt-3">
         <div className="flex-1 ">
-          <p className="mb-1 text-sm text-gray-400">{title}</p>
+          <Link
+            to={`/shop/${id}`}
+            className="mb-1 text-sm text-gray-400 hover:text-[#717fe0]"
+          >
+            {title}
+          </Link>
           <p className="text-sm text-gray-500 ">${price}</p>
         </div>
         <button>
