@@ -6,6 +6,7 @@ import BodySlide from "../components/BodySlide";
 import ViewCart from "../components/ViewCart";
 import CartTotal from "../components/CartTotal";
 import QuickView from "../components/QuickView";
+import Review from "../components/Review";
 
 const App = () => {
   const products = [
@@ -47,6 +48,7 @@ const App = () => {
       <ViewCart/>
       <CartTotal/>
       <QuickView/>
+      <Review/>
     </div>
   );
 };
