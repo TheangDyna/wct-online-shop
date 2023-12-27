@@ -31,7 +31,7 @@ const XFooter = () => {
           <input
             type="text"
             placeholder="email@example.com"
-            className="w-full mb-5 border-gray-600 input bg-inherit focus:outline-gray-600 focus:border-gray-600"
+            className="w-full mb-5 border-gray-600 rounded-md input bg-inherit focus:outline-gray-600 focus:border-gray-600"
           />
 
           <button className="rounded-full btn bg-[#717fe0] border-none text-white px-12 hover:text-[#717fe0] hover:bg-white">
