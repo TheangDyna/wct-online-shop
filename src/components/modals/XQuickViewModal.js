@@ -1,7 +1,7 @@
 import React from "react";
 import { XMarkIcon } from "../icons/XMarkIcon";
-import XViewProductsCatalog from "../catalog/XViewProductsCatalog";
-import AddToCartCatalog from "../catalog/XAddToCartCatalog";
+import XViewProductsCatalog from "../catalogs/XViewProductsCatalog";
+import AddToCartCatalog from "../catalogs/XAddToCartCatalog";
 
 const XQuickViewModal = ({ id }) => {
   const images = [

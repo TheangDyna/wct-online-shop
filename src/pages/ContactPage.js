@@ -2,7 +2,7 @@ import React from "react";
 import { MapPinIcon } from "../components/icons/MapPinIcon";
 import { PhoneIcon } from "../components/icons/PhoneIcon";
 import { EnvelopeIcon } from "../components/icons/EnvelopeIcon";
-import XMapCatalog from "../components/catalog/XMapCatalog";
+import XMapCatalog from "../components/catalogs/XMapCatalog";
 
 const contactInfo = [
   {
@@ -24,18 +24,11 @@ const contactInfo = [
 ];
 
 const ContactPage = () => {
-  const defaultProps = {
-    center: {
-      lat: 11.568460062900519,
-      lng: 104.8906792667964,
-    },
-    zoom: 11,
-  };
   return (
     <div>
-      <div className="h-10" />
+      <div className="h-10" />clear
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="border pt-[55px] px-[70px] pb-[70px] flex flex-col items-center gap-8">
+        <div className="border p-[20px] lg:pt-[55px] lg:px-[70px] lg:pb-[70px] flex flex-col items-center gap-8">
           <p className="text-2xl">Send Us A Message</p>
           <input
             type="email"
@@ -51,30 +44,32 @@ const ContactPage = () => {
             SUBMIT
           </button>
         </div>
-        <div className="border pt-[55px] px-[70px] pb-[70px] flex items-center">
+        <div className="border p-[20px] lg:pt-[55px] lg:px-[70px] lg:pb-[70px] flex items-center">
           <table>
-            {contactInfo.map((info, index) => (
-              <div key={index}>
-                <tr>
-                  <td className="w-[40px] h-14">{info.icon}</td>
-                  <td>
-                    <p className="text-lg">{info.title}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td className="pb-4 w-[240px]">
-                    <p
-                      className={`text-sm ${
-                        index === 0 ? "text-gray-400" : "text-[#717fe0]"
-                      }`}
-                    >
-                      {info.details}
-                    </p>
-                  </td>
-                </tr>
-              </div>
-            ))}
+            <tbody>
+              {contactInfo.map((info, index) => (
+                <React.Fragment key={index}>
+                  <tr>
+                    <td className="w-[40px] h-14">{info.icon}</td>
+                    <td>
+                      <p className="text-lg">{info.title}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td className="pb-4 w-[240px]">
+                      <p
+                        className={`text-sm ${
+                          index === 0 ? "text-gray-400" : "text-[#717fe0]"
+                        }`}
+                      >
+                        {info.details}
+                      </p>
+                    </td>
+                  </tr>
+                </React.Fragment>
+              ))}
+            </tbody>
           </table>
         </div>
       </div>

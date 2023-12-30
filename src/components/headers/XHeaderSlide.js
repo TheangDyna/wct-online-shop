@@ -68,7 +68,7 @@ const XHeaderSlide = () => {
         return (
           <div
             key={index}
-            className={`mx-auto h-min text-black transform -translate-y-1/2 top-1/2 min-w-[1380px] px-6 ${
+            className={`mx-auto h-min text-black transform -translate-y-1/2 top-3/4 duration-300 2xl:top-1/2 min-w-[1380px] px-6 ${
               index === currentSlide ? "relative" : "hidden"
             }`}
           >

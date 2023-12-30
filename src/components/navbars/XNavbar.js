@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { navigations } from "../../constants/navigation";
 import { HeartOutlineIcon } from "../icons/HeartOutlineIcon";
 import XNavLink from "../link/XNavLink";
+import { Bars3CenterLeftIcon } from "../icons/Bars3CenterLeftIcon";
 
 const XNavbar = ({ isHomepage }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,9 +36,30 @@ const XNavbar = ({ isHomepage }) => {
       }`}
     >
       <div className="navbar mx-auto max-w-[1380px]">
-        <div className="flex flex-1">
-          <Link to="/" className="text-2xl">
-            <span className="font-bold">Online</span> Shop
+        <div className="dropdown">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle` lg:hidden"
+          >
+            <Bars3CenterLeftIcon className="w-6 h-6" />
+          </div>
+          <ul
+            tabIndex={0}
+            className="flex flex-col dropdown-content mt-3 z-[1] shadow-lg bg-white rounded-md w-52 p-3"
+          >
+            {navigations.map((item, index) => {
+              return (
+                <li key={index}>
+                  <XNavLink path={item.path}>{item.title}</XNavLink>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="flex justify-center flex-1 lg:justify-start">
+          <Link to="/" className="hidden text-2xl sm:block">
+            <span className="font-bold">WCT</span> Shop
           </Link>
           <div className="hidden ml-10 lg:flex">
             <ul className="flex">
@@ -51,7 +73,6 @@ const XNavbar = ({ isHomepage }) => {
             </ul>
           </div>
         </div>
-
         <button className="btn btn-circle btn-ghost">
           <MagnifyingGlassIcon className="w-6 h-6" />
         </button>

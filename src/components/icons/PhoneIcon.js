@@ -1,7 +1,6 @@
 export function PhoneIcon(props) {
   return (
     <svg
-      dataSlot="icon"
       fill="none"
       strokeWidth={1.5}
       stroke="currentColor"

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import XViewProductsCatalog from "../components/catalog/XViewProductsCatalog";
-import AddToCartCatalog from "../components/catalog/XAddToCartCatalog";
+import XViewProductsCatalog from "../components/catalogs/XViewProductsCatalog";
+import AddToCartCatalog from "../components/catalogs/XAddToCartCatalog";
 import XTab from "../components/tab/XTab";
-import XDescriptionCatalog from "../components/catalog/XDescriptionCatalog";
-import XInformationCatalog from "../components/catalog/XInformationCatalog";
-import XReviewsCatalog from "../components/catalog/XReviewsCatalog";
+import XDescriptionCatalog from "../components/catalogs/XDescriptionCatalog";
+import XInformationCatalog from "../components/catalogs/XInformationCatalog";
+import XReviewsCatalog from "../components/catalogs/XReviewsCatalog";
 
 const images = [
   "https://preview.colorlib.com/theme/cozastore/images/product-detail-01.jpg.webp",

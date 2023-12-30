@@ -7,8 +7,8 @@ const XNavLink = ({ path, children }) => {
       to={path}
       className={({ isActive }) =>
         isActive
-          ? "font-normal btn btn-ghost text-[#717fe0]"
-          : "font-normal btn btn-ghost"
+          ? "font-normal btn btn-ghost text-[#717fe0] w-full"
+          : "font-normal btn btn-ghost w-full"
       }
     >
       {children}

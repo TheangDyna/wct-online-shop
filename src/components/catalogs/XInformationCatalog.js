@@ -25,12 +25,14 @@ const XInformationCatalog = ({ information }) => {
   );
   return (
     <table className="w-[520px] mx-auto">
-      {formattedInformation.map(([key, value]) => (
-        <tr key={key}>
-          <td className="w-[145px] text-sm text-gray-600">{key}</td>
-          <td className="text-sm text-gray-500">{value}</td>
-        </tr>
-      ))}
+      <tbody>
+        {formattedInformation.map(([key, value]) => (
+          <tr key={key}>
+            <td className="w-[145px] text-sm text-gray-600">{key}</td>
+            <td className="text-sm text-gray-500">{value}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 };

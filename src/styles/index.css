@@ -8,3 +8,7 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   display: none;
 }
+
+.menu-sm :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+.menu-sm :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+}

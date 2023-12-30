@@ -11,6 +11,7 @@ import ShopPage from "./pages/ShopPage";
 import ContactPage from "./pages/ContactPage";
 import ProductPage from "./pages/ProductPage";
 import ScrollToTop from "./helpers/ScrollToTop";
+import CheckOutPage from "./pages/CheckOutPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/shop/:productId" element={<ProductPage />} />
+          <Route path="/shop/checkout" element={<CheckOutPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
