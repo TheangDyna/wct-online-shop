@@ -1,18 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js}"],
+export default {
+  content: ["./src/**/*.{html,js,jsx}"],
   plugins: [require("daisyui")],
   daisyui: {
-    themes: false,
+    themes: ["light"],
   },
   theme: {
     fontFamily: {
       sans: ['"Poppins"', "sans-serif"],
     },
     extend: {
-      spacing: {
-        "2/3": "6.666667%",
-      },
       keyframes: {
         moveRight: {
           "0%": { transform: "translateX(-100px)", opacity: "0%" },

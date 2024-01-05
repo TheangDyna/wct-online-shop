@@ -1,9 +1,5 @@
 const productCategories = [
   {
-    title: "All Products",
-    value: "all",
-  },
-  {
     title: "Women",
     value: "women",
   },
