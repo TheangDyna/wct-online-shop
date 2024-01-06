@@ -4,7 +4,6 @@ import AddToCartCatalog from "../catalogs/XAddToCartCatalog";
 import PropTypes from "prop-types";
 
 const XQuickViewModal = ({ title, price, cover, id, preview }) => {
-  console.log(title, price, cover, id, preview);
   return (
     <dialog id={id} className="px-6 modal">
       <div className="max-w-[1380px] w-full h-full bg-white rounded-none modal-box px-5 py-10">
