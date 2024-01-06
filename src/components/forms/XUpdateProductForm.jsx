@@ -70,7 +70,7 @@ const XUpdateProductForm = ({ updateProduct }) => {
     >
       <img src="./shop.png" className="w-12 h-12" />
       <p className="px-5 text-2xl">
-        <span className="font-bold">Add</span> A New Product
+        <span className="font-bold">Update</span> A Product
       </p>
       <p className="px-5 text-sm text-center text-gray-600">
         Please fill out the form below to create a new product, providing

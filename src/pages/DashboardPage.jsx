@@ -12,19 +12,6 @@ const DashboardPage = () => {
   const [loading, setLoading] = useState(true);
   const [updateProduct, setUpdateProduct] = useState(null);
 
-  // useEffect(() => {
-  //   const q = query(collection(db, "product"));
-  //   const unsubscribe = onSnapshot(q, (querySnapshot) => {
-  //     let itemsArr = [];
-  //     querySnapshot.forEach((doc) => {
-  //       itemsArr.push({ ...doc.data(), id: doc.id });
-  //     });
-  //     setProduct(itemsArr);
-  //   });
-
-  //   return () => unsubscribe();
-  // }, []);
-
   useEffect(() => {
     const fetchData = async () => {
       const q = query(collection(db, "product"));

@@ -18,9 +18,7 @@ const XProductCard = ({ title, price, cover, id, preview }) => {
         <div className="absolute flex justify-center w-full duration-300 -bottom-20 group-hover:bottom-5">
           <button
             className="h-10 px-8 font-normal bg-white border-none rounded-full w-max btn btn-sm hover:bg-[#222] hover:text-white"
-            onClick={() =>
-              document.getElementById("quickViewModal").showModal()
-            }
+            onClick={() => document.getElementById(id).showModal()}
           >
             Quick View
           </button>
@@ -41,7 +39,7 @@ const XProductCard = ({ title, price, cover, id, preview }) => {
         </button>
       </div>
       <XQuickViewModal
-        id="quickViewModal"
+        id={id}
         cover={cover}
         preview={preview}
         title={title}
