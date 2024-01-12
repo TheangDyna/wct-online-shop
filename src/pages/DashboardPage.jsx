@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import XFloatButton from "../components/buttons/XFloatButton";
 import XAddProductModal from "../components/modals/XCUProductModal";
 import { collection, onSnapshot, query } from "firebase/firestore";
@@ -6,11 +6,13 @@ import { db } from "../services/firebase";
 import { TrashIcon } from "../components/icons/TrashIcon";
 import { PencilSquareIcon } from "../components/icons/PencilSquareIcon";
 import databaseService from "../services/databaseService";
+import AuthContext from "../Contexts/AuthContext";
 
 const DashboardPage = () => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [updateProduct, setUpdateProduct] = useState(null);
+  const { currentUser } = useContext(AuthContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,6 +33,10 @@ const DashboardPage = () => {
   }, []);
 
   const handleDelete = async (id) => {
+    if (currentUser?.email != "admin@gmail.com") {
+      alert("No authorize");
+      return;
+    }
     await databaseService.deleteData("product", id);
   };
 
@@ -39,6 +45,10 @@ const DashboardPage = () => {
   };
 
   const handleUpdate = (item) => {
+    if (currentUser?.email != "admin@gmail.com") {
+      alert("No authorize");
+      return;
+    }
     document.getElementById("productModal").showModal();
     setUpdateProduct(item);
   };

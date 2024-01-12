@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { PhotoIcon } from "../icons/PhotoIcon";
 import { PlusIcon } from "../icons/PlusIcon";
 import { XMarkIcon } from "../icons/XMarkIcon";
 import { productCategories } from "../../constants/filter";
 import uploadService from "../../services/uploadService";
 import databaseService from "../../services/databaseService";
+import AuthContext from "../../Contexts/AuthContext";
 
 const XAddProductForm = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [coverFile, setCoverFile] = useState(null);
   const [previewFile, setPreviewFile] = useState([]);
+  const { currentUser } = useContext(AuthContext);
+
   const handleAddCover = (e) => {
     const cover = e.target.files;
     setCoverFile(cover);
@@ -27,6 +30,10 @@ const XAddProductForm = () => {
   };
 
   const handleAddProduct = async (e) => {
+    if (currentUser?.email != "admin@gmail.com") {
+      alert("No authorize");
+      return;
+    }
     setLoading(true);
     e.preventDefault();
     const form = e.target.elements;
