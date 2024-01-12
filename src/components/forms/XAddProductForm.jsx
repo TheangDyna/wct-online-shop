@@ -30,12 +30,12 @@ const XAddProductForm = () => {
   };
 
   const handleAddProduct = async (e) => {
+    e.preventDefault();
     if (currentUser?.email != "admin@gmail.com") {
       alert("No authorize");
       return;
     }
     setLoading(true);
-    e.preventDefault();
     const form = e.target.elements;
     const category = form.productCategory.value;
     const name = form.productTitle.value;
